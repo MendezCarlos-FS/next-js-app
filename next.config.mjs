@@ -5,6 +5,7 @@ const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     basePath: "/next-js-app",
     distDir: "docs",
+    output: "export",
 };
 
 const withMDX = createMDX();

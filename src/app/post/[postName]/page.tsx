@@ -1,5 +1,14 @@
 import dynamic from "next/dynamic";
 import fs from "fs";
+import { removeExtension } from "@/app/util";
+
+export async function generateStaticParams() {
+    const files = fs.readdirSync("./src/app/content");
+    
+    return files.map(file => {
+        return { postName: removeExtension(file) };
+    })
+}
 
 export default function Post(params: { params: { postName: string }}) {
     const fileName = params.params.postName;
