@@ -4,7 +4,7 @@ import { removeExtension } from "@/app/util";
 
 export async function generateStaticParams() {
     const files = fs.readdirSync("./src/app/content");
-    
+
     return files.map(file => {
         return { postName: removeExtension(file) };
     })

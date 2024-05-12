@@ -1,0 +1,98 @@
+# Reflecting on my React.js Learning Experience
+
+First off, welcome to any who may be reading! I appreciate giving your
+time just to read over the insight of just another student. Being able
+to share my learning experiences as a way for me to reflect in the future
+could also be a useful way to provide someone else's perspective through
+this journey. Hope you continue to enjoy your time today!
+
+This month's class of Interface Programming with the React.js library
+has come to an end, and with it is a lot of React.js knowledge obtained.
+I had a good first impression of React and it certainly didn't disappoint.
+It felt very robust as a frontend library, giving devs a lot of freedom on
+how they wish to approach certain problems. In this post, I intend on going
+over some of the more important concepts that stuck with me as well as any
+React-specific features that I liked.
+
+## What is React.js?
+
+React.js is a frontend library that gives developers the capability to make
+single-paged applications with small amounts of effort. It has a lot of
+options for developers to quickly build these from scratch while still being
+more lightweight than a framework like Angular. 
+
+## Components
+
+The idea behind components is simple, but very effective. Basically, we
+can take any portion of HTML (whether it's something as simple as a button
+or more complex like a full page) and make it into its own block of code.
+So, let's say I want to have a button. With this button, I want to add a
+few extra things to it, like maybe a dropdown arrow to make a specific
+selection aside from just a confirmation. I can create this button's behavior
+and styling inside a Button component, then reuse this block of code by
+simply referencing this Button component in different parts of the code. The
+reusability makes it very easy to use common functionality all over the website
+and only need to update in one location for all of the instances of it to also
+be updated. A huge time saver and in my mind a good way to think about chunks
+of HTML.
+
+## Props and States
+
+Props are a way to relay information from a parent component to a child
+component. Let's say you have a Checkout Page component that contains a
+Button component. You can send the Button component what text to display
+within the Checkout Page component as a prop. Then the Button component
+reads this prop object to get the text and display it.
+
+React uses states for each component to keep track of any relevant
+information. For example, if you have a form that a user will fill up
+with some information, like a job application form, you can store the
+information that is being inputted and use it where necessary. Each
+component can have its own specific state that is unrelated to other
+components, making it easy to keep track of each individual component's state.
+
+Both of these can work together to relay information to other components
+and/or store the information for future use.
+
+## Routing
+
+Routing allows single-paged applications to traverse through separate page
+components similar to how one would traverse a traditional website. For
+example, in a traditional website, you can click the About page from the
+Home page which will redirect you over to that page. However, it would move
+you to that page while having to fetch whatever new files are located in
+that web address. Because of React's single-paged nature, we can use routing
+to perform the same task without the page refreshing, which means there's no
+re-fetching of files. I like to think of it as if each page is treated like
+a quick-swappable block of HTML.
+
+## Hooks
+
+To my understanding, hooks are a React-specific way of handling common
+behavior. So for example, before you would use a state object in a component
+to keep track of that component's relevant information. However, you can
+instead use the useState hook so it can handle most of the logic with regards
+to actually storing a specific state value for you.
+
+The useContext hook can allow parent components to share objects to
+deeply-nested children components without having to pass it down with each
+child component. Imagine Component A is a parent component, Component B is a
+child of A, Component C is a child of B and Component D is a child of C. With
+useContext, you can directly access a value of Component A from Component D
+without having to pass it through Component B and Component C.
+
+There are many React hooks, each with its own specific use case, but these
+two are the ones I enjoyed using the most, and thought to share it.
+
+## Conclusion
+
+React.js has a lot of functionality, way more than I covered here, but I
+wanted to highlight the ones I remember and enjoyed implementing the most.
+I had previous Angular experience, so a lot of the concepts were the same in both,
+just the execution of it was different. Of the two, React.js feels much easier to
+learn in comparison and still provides most of the functionality any single-page
+application dev is likely to use. I would highly recommend learning React.js as a
+starting point to the single-paged library/framework concepts over the two, which
+can help to then transition to the other in case it's necessary.
+
+export default ({ children }) => <div className="prose">{children}</div>

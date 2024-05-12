@@ -22,7 +22,10 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript/>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className}
+      flex flex-col gap-5
+      justify-between items-center
+      mx-auto max-w-5xl min-h-screen`}>
         <MantineProvider>
           <header>
             <nav>

@@ -1,0 +1,107 @@
+# NodeJS, Postman and MongoDB - Oh My!
+
+Hello to all! I hope you're having a good day so far, or even a good
+start of the day! And if not, I hope you things can improve for you soon enough!
+
+Along with the Database class I took this month, I also had a back-end related
+class. Server-side Languages, which includes the likes of NodeJS, Postman and
+MongoDB. [I covered MongoDB in the database post](./database-learning-with-mongoDB-and-mySQL), but I'll be talking about it
+here with regards to mongoose, an NPM package that makes communication between
+the Node app and MongoDB much easier.
+
+## NodeJS
+
+### What is it?
+
+NodeJS ([here is their website](https://nodejs.org/en)) is "an asynchronous
+event-driven JavaScript runtime," as their About page describes. It is able to
+handle multiple user requests, whether it's sending data or receiving data to
+and from the user. The way I view it is a middleman between the front-end side
+(a website a user has access to, like Facebook) and the database that stores
+all the data related to the front-end. The front-end sends something like a
+"Get all users" request to the NodeJS app, which then interprets this request,
+fetches the data from the database if it needs to, then returns that data back
+to the user that sent the request.
+
+### Why use it?
+
+As a middleman that typically a regular user has no way to directly access,
+it's a good place to validate data, check for authentication, and prevent anything
+malicious from accessing the database. Of course, that'll always depend on the
+implementation of the person creating the NodeJS app, but I feel these are reasons
+that make it so useful for developers. In also helps facilitate the handling of
+data. Instead of manually inputting any and all data coming to and from the
+database, the NodeJS app can do that for us instead. We can code a button in the
+front-end interface that sends the request of whatever thing we want it to do,
+have the NodeJS read this request then do all that we need it to for us. Feels
+like without something like this in basically every working website, it would be
+nightmarish to work with thousands or millions of data requests in days or even
+hours. Reasons like these I'm so grateful for humans being lazy as hell, always
+gotta make things easier somehow!
+
+## Postman
+
+### What is it?
+
+Postman ([here's the link to their page](https://www.postman.com)) is a software
+that can make requests without having to worry about building a front-end to
+test certain endpoints. So if you're building specifically just a back-end
+application but need to test it, Postman is perfect for this. It's technically
+more than just what I describe it to be, but it's certainly my favorite reason
+to use it.
+
+### Why use it?
+
+As mentioned before, it eases the process of sending requests since it has the
+infrastructure built to display any responses in a human-readable way. My
+understanding is that it basically makes what used to be something like a curl
+command (in case you haven't heard of curl before, here's a link to their page)
+and make it much easier to write the request and read the response along with
+any status code it might've returned. It even has a function to convert those
+request you've made into a curl command, interestingly enough. Along with just
+making these requests, you can also create tests for the requests which are
+perfect to make sure every endpoint that you create in your back-end works as expected.
+
+## MongoDB and Mongoose
+
+### What are they?
+
+MongoDB ([here's a link to their page](https://www.mongodb.com)) is a non-relational
+database. This means that it's a database where the objects stored are not stored
+with any relationships to each other. They're essentially JSON objects stored in a
+database. Mongoose ([here's a link to their documentation](https://mongoosejs.com))
+is an NPM package that makes it easy to communicate with your NodeJS app as well
+as the MongoDB database. It has a lot of built-in functionality that makes it easy
+to use and allows for a very similar experience to actually handling data directly
+from MongoDB.
+
+### Why use them?
+
+MongoDB, as well as any other database that is used, is useful for storing large
+chunks of data. Whatever it is you want to store, there's no reason not to use a
+database that is designed for this kind of behavior. As for mongoose, it makes
+the process of communicating with the database a lot more manageable than doing
+so manually. You can create the objects in your NodeJS app that will map directly
+into a MongoDB object thanks to mongoose as well as handle retrieved MongoDB
+objects in the same way one would handle a regular JavaScript object. Both of
+them working together, it's honestly very useful.
+
+## Conclusion
+
+With the database class and this server-side class taken together, I feel I
+gained a lot of useful information that can help me for my own personal
+projects as well as just any work environment. Even if I weren't to use the
+same technologies, having a good grasp of the concepts and overall workflow
+is always a plus in my eyes. Immediately after finishing the class, I was
+motivated to take a free Postman course to learn more about its functionality,
+and I highly recommend doing so if you ever get the chance or want to learn
+more about it. It's not too long, goes step by step with its features and
+teaches a lot of useful features that are either time-saving or useful for
+organization purposes.
+
+For any and all who took the time to read through this, thank you so much!
+I don't have any high hopes of many people coming across these posts, but
+if even one person benefits from someone who's still learning, that's good
+enough for me! Take care, and hope you have a good rest of your day!
+
+export default ({ children }) => <div className="prose">{children}</div>

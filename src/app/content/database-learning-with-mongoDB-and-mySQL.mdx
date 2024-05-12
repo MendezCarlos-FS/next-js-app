@@ -1,0 +1,137 @@
+# Database Learning with MongoDB and MySQL!
+
+Hello to any and all who stumble across this post! Hope your day has
+been going as well, and hope any other days coming up are just as well
+or better, and if not, I do hope things improve soon!
+
+This month, I went over two classes. The one I'll cover in this post will
+be about the database class I took, but there will be another post talking
+about the second class as well!
+[Hopefully this sentence will link to that post once it's up!](./nodeJS-postman-and-mongoDB-oh-my)
+
+## Overview
+
+So, what did I learn this time with regards to databases? Well, a decent
+amount, I'd like to think. The class has us host a virtual machine using
+AWS's EC2 service
+([Here's the link for the service in case of curiosity](https://aws.amazon.com/ec2/),
+I feel I don't know enough to properly describe it myself). This instance
+was created with MySQL and MongoDB installed. We used Mac's Terminal
+software to communicate with the VM, Filezilla
+([here's a link to Filezilla](https://filezilla-project.org),
+which is a software that facilitates file transferring from one's PC to another
+device like an Amazon-hosted VM!) to transfer files to and from the VM and
+MySQL Workbench ([here's a link to MySQL Workbench](https://www.mysql.com/products/workbench/), which is a way to work
+with MySQL databases in a more visual way than Mac Terminal or just command
+prompt itself) to work with the MySQL database with a GUI, which I personally
+prefer. We also worked with MongoDB, a non-relational database (which I'll
+cover in a moment, and also [here's a link to MongoDB's site](https://www.mongodb.com)
+and [another link to MongoDB compass](https://www.mongodb.com/products/tools/compass) which is a GUI interface for it) and Neo4J,
+a graph-based database system ([here's a link to their page](https://neo4j.com)).
+So, here are the things that stuck with me the most for this class:
+
+## MySQL
+
+### What is it?
+
+MySQL is a relational database. My understanding of a relational database
+is basically creating relationships between different objects. For example,
+let's say we have a Person table. A person can have something like a Car.
+The Car has its own set of values, like make, brand, model, etc. You would
+store the Car's values in its own table, then have the Person store a value
+from Car that can connect to it, something like an ID, so you wouldn't need
+to store all of the Car's values into the Person itself. Essentially, you
+have one Car object in the Car table that the Person table can link to.
+Since less actual values are being saved, it helps in terms of storage
+capacity.
+
+### Why use it?
+
+Relational databases in general have been around for the longest time,
+making them one if not the most common type of database to work with, so
+learning about any type of relational database is always something good
+to keep in mind, in my eyes. As such, there's also a huge amount of resource
+to learn from. Personally coming from a more JSON-oriented mindset when
+it comes to data, it took some time for me to wrap my head around, even
+though it was my first type of database interaction ever, but there's no
+denying its versatility and speed when it comes to handling an enormous
+amount of data at once.
+
+## MongoDB
+
+### What is it?
+
+MongoDB is a non-relational database. This means that each table does
+not reference another table as the default behavior. So, imagine the same
+Person table from before that would contain all the information related
+to the Car table from before stored within it. Another difference is how
+a non-relational database can have different variable for each object.
+For example, Person A has an age value whereas Person B has a middle name
+value instead. These differences can be stored without causing any problems
+as there is no specific structure associated to the MongoDB databases.
+They're most closely associated as a JSON object, but in database form.
+The reason I specify "as the default behavior" is because it can be
+programmed to function in a similar manner as relational databases. There
+is a function for the mongoose module that is utilized in NodeJS, for
+example, that can populate something like a "car" variable for a Person
+that is stored in a Car table instead, which is a function called Populate.
+I'll go more into NodeJS on my other post once it's uploaded, though!
+
+### Why use it?
+
+To me, the way MongoDB stores objects and retrieves them to and from a
+database makes more sense. It's more intuitive to me as it's basically
+just storing JSON objects into a database that we're just retrieving, which
+makes it much easier to think about. As for speed compared to MySQL, I
+wouldn't be able to say how much better or worse it is, as I have yet to
+experience a situation where speed is a necessity, since I do not have actual
+work experience with regards to thousands of people fetching data from a
+database. So for my own purposes, I'm currently more inclined to go with
+MongoDB as a first choice.
+
+## Neo4J
+
+### What is it?
+
+Neo4J is a graph database. We didn't cover it as much as the other two,
+but here's about what I can remember from it. Data is stored same as any
+other database, but the objects and their relationships are visualized in a
+graph. The relationships between objects are also shown in this graph manner.
+This can look something similar to "Person A --- has a ---> Car A", for
+example. It's a much easier way to visualize objects and the relationships
+they have with any other object that exists in the database.
+
+### Why use it?
+
+This was the first time I had heard of Neo4J, and I haven't heard of it
+being used in a work environment (although it more than likely is), but off
+the top of my head, the main benefit I can see from it is how easy it is
+to look at stuff at a glance. The connections make a lot more sense, and
+you can quickly see if the relationships between the objects make sense.
+Since every object can have it's own type, you can also easily filter for
+object types, specific objects or specific object relationships. It feels
+like it would allow for a more human-readable or human-useable experience
+compared to the previous database types.
+
+## Conclusion
+
+A lot of info for this class, and personally very useful. I'm hoping I can
+actually start using one of these for my own personal projects to practice
+with. I've been using a new software called Obsidian
+([here's a link to their page](https://obsidian.md)), which is basically
+a text editor that is written mostly in markdown.
+It allows for a lot of customization that makes it super useful for
+documentation purposes (at least for my needs), and I'm wondering if I could
+potentially implement databases to work along with Obsidian. I'd have to
+program a working plugin with it, or find an existing one if it does exist,
+so I'm not in a rush to go for it, but it's a nice option to consider.
+Databases feel like a completely different beast in terms of programming,
+very useful but very scary at the same time, since a lot of important
+information can be stored in it and potentially lost if you're not careful.
+Still, if it weren't useful, it wouldn't be around after decades in
+different forms to suit ever-evolving needs.
+
+That's it from me for this post, I hope anyone finds my insights on what
+I learned here useful! Take care all, and happy coding!
+
+export default ({ children }) => <div className="prose">{children}</div>
