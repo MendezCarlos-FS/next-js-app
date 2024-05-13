@@ -6,6 +6,9 @@ const nextConfig = {
     basePath: "/next-js-app",
     distDir: "docs",
     output: "export",
+    images: {
+        unoptimized: true
+    }
 };
 
 const withMDX = createMDX();

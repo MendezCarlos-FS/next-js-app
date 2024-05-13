@@ -1,8 +1,8 @@
-import dynamic from 'next/dynamic';
 import fs from "fs";
-import { Button, Group, Stack } from '@mantine/core';
+import { Card, Divider } from '@mantine/core';
 import { removeExtension, toTitleCase } from "./util";
 import Link from 'next/link';
+import Image from "next/image";
 
 export default function Home() {
   const files = fs.readdirSync("./src/app/content");
@@ -17,21 +17,27 @@ export default function Home() {
 
   function displayPosts() {
     const navComponents = filesWithTitle.map(file => {
-      return <Link key={file.file} href={`/post/${file.file}`}><h2>{file.title}</h2></Link>
+      return (
+      <Card key={file.file} shadow='md' padding='lg' radius='md' withBorder>
+        <Link href={`/post/${file.file}`}><h3>{file.title}</h3></Link>
+      </Card>
+      );
     });
 
     return (
-      <nav className='flex gap-5'>
+      <nav className='flex flex-col gap-5 items-center'>
         {...navComponents}
       </nav>
     );
   }
 
   return (
-    <main className='flex flex-col gap-5
-      justify-between items-center'>
-      <h1>Blog Posts</h1>
-      {displayPosts()}
+    <main className='flex gap-5'>
+        <section className='flex flex-col gap-5
+          justify-between items-center'>
+          <h1>Blog Posts</h1>
+          {displayPosts()}
+        </section>
     </main>
   );
 }
